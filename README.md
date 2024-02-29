@@ -41,15 +41,15 @@ CREATE TABLE ContaBancaria (
 
 # Sistemas criados em Andamento ou Finalizadas!
 
-Janelas [Figma] - Finalizado
-Sistema de Login - Finalizado
-Sistema de Cadastro - Finalizado
-Sistema de Transferencia - Incompleto
-Sistema de Depositon - Incompleto
-Sistema de Gerenciamento de Pix - Incompleto
-Sistema de Agendamento de Pagamentos - Incompleto
-Sistema de Cartão de Credito - Incompleto
-Sistema de Suporte 24/7 - Incompleto
+Janelas [Figma] - Finalizado <br>
+Sistema de Login - Finalizado <br>
+Sistema de Cadastro - Finalizado <br>
+Sistema de Transferencia - Incompleto <br>
+Sistema de Depositon - Incompleto <br>
+Sistema de Gerenciamento de Pix - Incompleto <br>
+Sistema de Agendamento de Pagamentos - Incompleto <br>
+Sistema de Cartão de Credito - Incompleto <br>
+Sistema de Suporte 24/7 - Incompleto <br>
 
 <br>
 
