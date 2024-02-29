@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Payment - Cadastro</title>
+    <link rel="stylesheet" href="/Front-End/Css/Cadastro2.css" />
+  </head>
+  <body>
+    <nav>
+      <section id="Background">
+        <section id="Login">
+          <div id="Logo">
+            <img src="/Front-End/Assets/Logo 1.svg" alt="" />
+          </div>
+          <div id="Dados">
+            <h1>Tudo pronto!</h1>
+            <img src="/Front-End/Assets/TudoPronto.svg" alt="" id="Profile" />
+            <p>
+              Dentro de alguns instantes <br />
+              você será redirecionado <br />
+              para a tela principal
+            </p>
+            <p>
+              Aguarde só um <br />
+              momento :D
+            </p>
+          </div>
+        </section>
+      </section>
+    </nav>
+    <script>
+      function redirecionarPagina() {
+        const tempo = 5000
+        const urlDestino = 'http://127.0.0.1:5500/Front-End/Html/index.html'
+
+        setTimeout(function () {
+          window.location.href = urlDestino
+        }, tempo)
+      }
+
+      window.onload = redirecionarPagina
+    </script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/Front-End/Assets/Fundo\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.BackGround {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.janela {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #326891;
+  color: white;
+  width: 80%;
+  border-radius: 30px;
+}
+.janela1 {
+  display: flex;
+  justify-content: space-between;
+}
+.esq {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.info {
+  display: flex;
+}
+
+.saldo {
+  display: flex;
+}
+
+.dir {
+  display: flex;
+  width: 90vw;
+  justify-content: right;
+  align-items: center;
+}
+
+.dir img {
+  width: 10%;
+  margin-right: 3%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  margin: 2%;
+  width: 15%;
+  border-radius: 50%;
+}
+
+.saldo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 3%;
+}
+
+.saldo img {
+  margin-left: 3%;
+}
+
+.box {
+  padding-top: 3%;
+  background-color: #dcdfe5;
+  margin-top: 3%;
+  padding-bottom: 10%;
+  border-radius: 40px 40px 0px 0px;
+}
+
+.opc {
+  display: flex;
+  justify-content: space-around;
+}
+
+.opc div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  padding: 2%;
+  background-color: #326891;
+  border-radius: 25px;
+  color: white;
+}
+
+.opc div img {
+  width: 50%;
+  height: 50%;
+  padding-bottom: 15%;
+}
+
+.DadosCartao {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Cartao {
+  background-color: #326891;
+  margin-inline: 3%;
+  border-radius: 25px;
+  margin-top: 5%;
+}
+
+.infoCartao {
+  padding-top: 1%;
+  margin-left: 10%;
+  display: flex;
+}
+.infoCartao img {
+  margin-right: 1%;
+}
+.DadosCartao h2 {
+  color: #b3b3b3;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #efc75e;
+  padding-block: 2%;
+  font-size: 9px;
+  border-radius: 0 0 30px 30px;
+}
+footer #Left {
+  margin-left: 3%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer #Right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1%;
+}
