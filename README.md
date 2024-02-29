@@ -2,7 +2,7 @@
 
 CloudPayments é um sistema simples em desenvolvimento de um Banco Virtual com algumas funções ainda em produção. 
 
-![C-programming-1024x530](https://raw.githubusercontent.com/Guilherme-A-Silva/Projeto-CloudPayments/5cce087fff6294b5d714298543a8949788f9459f/Front-End/Assets/Logo%201.svg?token=AQKNIPGPIOMDB3ABVVLT3QLF4EMQY)
+![CloudPayments](https://raw.githubusercontent.com/Guilherme-A-Silva/Projeto-CloudPayments/5cce087fff6294b5d714298543a8949788f9459f/Front-End/Assets/Logo%201.svg?token=AQKNIPGPIOMDB3ABVVLT3QLF4EMQY)
 
 # Resumo do CloudPayments
 
