@@ -23,17 +23,14 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/contas', (req, res) => {
-  connection.query(
-    'SELECT ContaBancaria.*, CartaoCredito.NumeroCartao, CartaoCredito.NomeTitular, CartaoCredito.DataExpiracao, CartaoCredito.CodigoSeguranca, CartaoCredito.Limite FROM ContaBancaria LEFT JOIN CartaoCredito ON ContaBancaria.ID = CartaoCredito.ContaBancariaID',
-    (err, results) => {
-      if (err) {
-        console.error('Erro ao executar a consulta:', err)
-        res.status(500).send('Erro ao buscar contas bancárias')
-        return
-      }
-      res.json(results)
+  connection.query('SELECT * FROM ContaBancaria', (err, results) => {
+    if (err) {
+      console.error('Erro ao executar a consulta:', err)
+      res.status(500).send('Erro ao buscar contas bancárias')
+      return
     }
-  )
+    res.json(results)
+  })
 })
 
 function gerarNumeroCartao() {
@@ -77,8 +74,20 @@ app.post('/contas', (req, res) => {
     const limite = gerarLimite()
 
     connection.query(
-      'INSERT INTO ContaBancaria (NomeCompleto, CPF, Email, Telefone, Senha) VALUES (?, ?, ?, ?, ?)',
-      [nomeCompleto, cpf, email, telefone, senha],
+      'INSERT INTO ContaBancaria (NomeCompleto, CPF, Email, Telefone, Senha, Saldo, NumeroCartao, NomeTitular, DataExpiracao, CodigoSeguranca, Limite) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+      [
+        nomeCompleto,
+        cpf,
+        email,
+        telefone,
+        senha,
+        '0.00',
+        numeroCartao,
+        nomeCompleto,
+        dataExpiracao,
+        codigoSeguranca,
+        limite
+      ],
       (err, result) => {
         if (err) {
           connection.rollback(() => {
@@ -91,43 +100,17 @@ app.post('/contas', (req, res) => {
           return
         }
 
-        const contaBancariaID = result.insertId
-
-        connection.query(
-          'INSERT INTO CartaoCredito (ContaBancariaID, NumeroCartao, NomeTitular, DataExpiracao, CodigoSeguranca, Limite) VALUES (?, ?, ?, ?, ?, ?)',
-          [
-            contaBancariaID,
-            numeroCartao,
-            nomeCompleto,
-            dataExpiracao,
-            codigoSeguranca,
-            limite
-          ],
-          (err, result) => {
-            if (err) {
-              connection.rollback(() => {
-                console.error(
-                  'Erro ao executar a consulta para criar cartão de crédito:',
-                  err
-                )
-                res.status(500).send('Erro ao criar conta bancária')
-              })
-              return
-            }
-
-            connection.commit(err => {
-              if (err) {
-                connection.rollback(() => {
-                  console.error('Erro ao confirmar a transação:', err)
-                  res.status(500).send('Erro ao criar conta bancária')
-                })
-                return
-              }
-
-              res.status(201).json(result)
+        connection.commit(err => {
+          if (err) {
+            connection.rollback(() => {
+              console.error('Erro ao confirmar a transação:', err)
+              res.status(500).send('Erro ao criar conta bancária')
             })
+            return
           }
-        )
+
+          res.status(201).json(result)
+        })
       }
     )
   })
