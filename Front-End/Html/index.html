@@ -49,6 +49,35 @@
     <section id="Home">
     <section class="BackGround">
       <div class="janela">
+        <section id="deposito">
+          <div onclick="FecharTransferencia()" id="Fechar">X</div>
+          <h2>Qual é o valor da transferência?</h2>
+          <div class="horizontal">
+            <h3>Valor:</h3>
+            <input type="text" name="valorT" id="valorT">
+          </div>
+          <h2>Para quem transferir?</h2>
+          <div class="horizontal">
+            <h3>CPF:</h3>
+            <input type="text" name="cpf" id="cpfT">
+          </div>
+          <h2>Como deseja transferir?</h2>
+          <div class="horizontal" id="opcs">
+            <div id="boxpix">
+            <input type="radio" name="pix" id="pix">
+            <label for="pix">PIX</label>
+          </div>
+          <div id="boxcartaocredito">
+            <input type="radio" name="cartaocredito" id="cartaocredito">
+            <label for="cartaocredito">Cartão de Crédito</label>
+          </div>
+          <div id="ted">
+            <input type="radio" name="ted" id="ted">
+            <label for="ted">TED</label>
+          </div>
+          </div>
+          <button id="EnviarMoney" class="Logar">Avançar</button>
+        </section>
         <div class="janela1">
           <div class="esq">
             <div class="info">
@@ -70,7 +99,7 @@
               <img src="/Front-End/Assets/Atualizar.svg" alt="" />
               <h2>Atualizar</h2>
             </div>
-            <div id="transferir">
+            <div id="transferir" onclick="MostrarTransferencia()">
               <img src="/Front-End/Assets/Transferir.svg" alt="" />
               <h2>Transferir</h2>
             </div>
@@ -166,6 +195,13 @@
           })
       })
       
+      function MostrarTransferencia() {
+  document.getElementById('deposito').style.display = 'flex'
+}
+
+function FecharTransferencia() {
+  document.getElementById('deposito').style.display = 'none'
+}
     </script>
   </body>
 </html>
