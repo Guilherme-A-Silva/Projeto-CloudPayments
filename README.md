@@ -1,14 +1,21 @@
 # Projeto-CloudPayments
- 
-#Passo a Passo para Testar o Sistema.
 
-Baixe o VsCode, Node.Js e MySQL.
+CloudPayments é um sistema simples em desenvolvimento de um Banco Virtual com algumas funções ainda em produção. 
 
-Crie o banco de dados Pelo MySQL
+![C-programming-1024x530]([https://user-images.githubusercontent.com/68473916/226371932-ed4684f7-fded-4170-802b-20a3271421c2.png](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Logo%201.svg))
 
-Comandos para criação do banco de Dados.
+# Resumo do CloudPayments
 
-{
+Este projeto foi iniciado por causa da disciplina de Modelos avançados de Banco de Dados, onde foi proposto um aplicação real de algum modelo de banco de dados para resolver algum problema ou implemtar uma solução para algum. <br>
+
+Ao longo da disciplina foi debatido bastante problemas relevantes no ambito da ciencia de dados <br>
+Problemas esses que pretendemos abordar em algumas funções neste projeto.<br>
+
+#Comandos para criação do banco de dados em SQL <br>
+
+(Foi utilizado o MySQL para iniciar o projeto )<br>
+
+```c++
 CREATE DATABASE Cloudpayments;
 
 USE Cloudpayments;
@@ -29,10 +36,34 @@ CREATE TABLE ContaBancaria (
     CodigoSeguranca VARCHAR(3),
     Limite DECIMAL(15, 2)
 );
-}
 
-Apos isso, abra o VSCode e Inicie o servidor Node com o script Servidor.js (Talvez seja necessario alterar os dados de login e senha do banco de dados do MySQL.)
+```
 
-Iniciando o servidor do Node e recebendo a mensagem de conexão bem sucessida. Você pode acessar a pagina, com o localhost. Pode usar a extensão GoLive para acessar as paginas front-end. E Apos isso, deve criar o seu usuario no sistema. Criando o usuario você pode logar e acessar o sistema.
+# Sistemas criados em Andamento ou Finalizadas!
 
-O sistema ainda esta incompleto. Pretendo concluir todas as funções dele, e inserir um passo a passo com videos futuramente de como usa-las e como modificar possiveis dados. 
+Janelas [Figma] - Finalizado
+Sistema de Login - Finalizado
+Sistema de Cadastro - Finalizado
+Sistema de Transferencia - Incompleto
+Sistema de Depositon - Incompleto
+Sistema de Gerenciamento de Pix - Incompleto
+Sistema de Agendamento de Pagamentos - Incompleto
+Sistema de Cartão de Credito - Incompleto
+Sistema de Suporte 24/7 - Incompleto
+
+<br>
+
+# Para conexão do servidor Node com o Banco de Dados do MySQL
+
+```c++
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root', 
+  password: '',
+  database: 'cloudpayments'
+})
+
+```
+
+Altere user e password se necessario. [Script Server.js]
