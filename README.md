@@ -67,3 +67,25 @@ const connection = mysql.createConnection({
 ```
 
 Altere user e password se necessario. [Script Server.js]
+
+# Telas Figma
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Login.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Cadastro%20-%201.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Cadastro%20-%202.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Cadastro%20-%203.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Cadastro%20-%204.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Extrato%20-%201.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Extrato%20-%202.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Home.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Transfer%C3%AAncia%20-%201.png?raw=true)
+
+![CloudPayments](https://github.com/Guilherme-A-Silva/Projeto-CloudPayments/blob/main/Front-End/Assets/Figma/Transfer%C3%AAncia%20-%202.png?raw=true)
